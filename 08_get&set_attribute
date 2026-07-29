@@ -1,0 +1,77 @@
+/*
+getAttribute()
+
+Returns the value of an attribute.
+*/
+
+const link = document.getElementById("link");
+
+console.log(link.getAttribute("href"));
+console.log(link.getAttribute("target"));
+
+/*
+setAttribute()
+
+Adds a new attribute or updates an existing attribute.
+*/
+
+// Change href
+link.setAttribute("href", "https://github.com");
+
+// Change target
+link.setAttribute("target", "_self");
+
+// Add title
+link.setAttribute("title", "Visit GitHub");
+
+console.log(link);
+
+/*
+Working with an image
+*/
+
+const image = document.getElementById("image");
+
+// Get image source
+console.log(image.getAttribute("src"));
+console.log(image.getAttribute("alt"));
+
+// Change image
+image.setAttribute("src", "https://picsum.photos/300");
+image.setAttribute("alt", "Random Image");
+
+/*
+Working with an input
+*/
+
+const input = document.getElementById("username");
+
+// Get placeholder
+console.log(input.getAttribute("placeholder"));
+
+// Change placeholder
+input.setAttribute("placeholder", "Enter your full name");
+
+// Disable input
+input.setAttribute("disabled", "");
+
+/*
+Custom Attributes
+*/
+
+const card = document.getElementById("card");
+
+// Add custom attribute
+card.setAttribute("data-id", "101");
+card.setAttribute("data-role", "admin");
+
+// Read custom attributes
+console.log(card.getAttribute("data-id"));
+console.log(card.getAttribute("data-role"));
+
+/*
+If the attribute doesn't exist,
+getAttribute() returns null.
+*/
+
+console.log(card.getAttribute("class"));
