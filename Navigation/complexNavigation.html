@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <!-- <div class="card"> -->
+    <!-- <h2>IPhoen 17</h2>
+    <p class="price">$999</p>
+    <p class="rating">⭐⭐⭐⭐⭐</p>
+    <button class="show">Show Details</button>
+  </div>
+
+    <div class="card">
+    <h2>Samsung S25</h2>
+    <p class="price">$899</p>
+    <p class="rating">⭐⭐⭐⭐</p>
+    <button class="show">Show Details</button>
+  </div> -->
+
+
+  <!-- <div class="card">
+    <div class="content">
+      <div class="details">
+        <h2>Shreyansh</h2>
+        <p>MERN Developer</p>
+        <button class="show">
+          Show Profile
+        </button>
+      </div>
+    </div>
+  </div> -->
+
+
+  <!-- <table border="1">
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Action</th>
+    </tr>
+
+
+    <tr>
+      <td>John The Don</td>
+      <td>20</td>
+      <td>
+        <button class="delete">
+          Delete
+        </button>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Chota Motu</td>
+      <td>21</td>
+      <td>
+        <button class="delete">
+          Delete
+        </button>
+      </td>
+    </tr>
+
+    <tr>
+      <td>Patlu</td>
+      <td>22</td>
+      <td>
+        <button class="delete">
+          Delete
+        </button>
+      </td>
+    </tr>
+  </table> -->
+
+
+  <!-- <div class="card">
+    <div class="content">
+      <div class="details">
+        <h2>Shreyansh</h2>
+        <p>MERN Developer</p>
+        <button class="show">
+          Show Profile
+        </button>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- <table border="1">
+    <tr>
+      <th>Name</th>   0
+      <th>Age</th>    1 
+      <th>Action</th>  2
+    </tr>
+
+    <tr>
+      <td>Shreyansh</td>
+      <td>100</td>
+      <td>
+        <button class="delete">Delete</button>
+      </td>
+    </tr>
+
+    <tr>
+      <td>John</td>
+      <td>20</td>
+      <td>
+        <button class="delete">Delete</button>
+      </td>
+    </tr>
+
+    <td>Bob</td>
+      <td>22</td>
+      <td>
+        <button class="delete">Delete</button>
+      </td>
+    </tr>
+  </table> -->
+  <!-- <div class="card">
+    <h2>IPhone 16</h2>
+    <p class="price">$999</p>
+    <p class="rating">⭐⭐⭐⭐⭐</p>
+    <button class="detailsBtn">
+      Show details
+    </button>
+  </div>
+
+    <div class="card">
+    <h2>Samsung S25</h2>
+    <p class="price">$799</p>
+    <p class="rating">⭐⭐⭐⭐</p>
+    <button class="detailsBtn">
+      Show details
+    </button>
+  </div> -->
+
+
+
+  <!-- <div class="card">
+    <h2>Shreyansh</h2>
+    <p>MERN Developer</p>
+    <button class="show">Show</button>
+  </div> -->
+  <!-- <ul>
+    <li>
+      Coffee
+      <button>Delete</button>
+    </li>
+
+    <li>
+      Tea
+      <button>Delete</button>
+    </li>
+
+  <li>
+      Cold Coffee
+      <button>Delete</button>
+    </li>
+  </ul> -->
+
+
+  <ul>
+    <li>
+      Coffeee
+      <button class="delete">Delete</button>
+    </li>
+
+    <li>
+      Cold Coffeee
+      <button class="delete">Delete</button>
+    </li>
+
+    <li>
+      Tea
+      <button class="delete">Delete</button>
+    </li>
+  </ul>
+  <script>
+
+    const button = document.querySelectorAll(".delete")
+
+    for(let btn of button){
+      btn.addEventListener("click",function(){
+        this.closest("li").remove()
+      })
+    }
+
+    // const button = document.querySelectorAll(".delete")
+
+    // for(let btn of button){
+    //   btn.addEventListener("click",function(){
+    //     let row = this.closest("tr")
+    //     let name = row.children[0].innerText
+    //     alert(name + " Deleted")
+    //     row.remove()
+    //   })
+    // }
+
+    // const button = document.querySelector(".show")
+    // button.addEventListener("click",function(){
+    //   const card = this.closest(".card")
+    //   const name = card.querySelector("h2")
+    //   const skill = card.querySelector("p")
+
+    //   alert(
+    //     "Name: "+ name.innerText+
+    //     "\n"+
+    //     "Skill :"+ skill.innerText
+    //   )
+    // })
+
+    // const button = document.querySelectorAll(".show")
+    // for(let btn of button){
+    //   btn.addEventListener("click",function(){
+    //     const card =  this.closest(".card")
+    //     const title = card.querySelector("h2")
+    //     const price = card.querySelector(".price")
+    //     const rating = card.querySelector(".rating")
+
+    //     alert(
+    //       title.innerText + "\n"+
+    //       price.innerText + "\n"+
+    //       rating.innerText
+    //     )
+    //   })
+    // }
+    // const detailButton = document.querySelectorAll(".detailsBtn")
+
+    // for(let btn of detailButton){
+    //   btn.addEventListener("click",function(){
+    //     const card = this.closest(".card")
+    //     const title = card.querySelector("h2")
+    //     const price = card.querySelector(".price")
+    //     const rating = card.querySelector(".rating")
+
+    //     alert(
+    //       title.innerText+ "\n"+
+    //       price.innerText + "\n"+
+    //       rating.innerText
+    //     )
+    //   })
+    // }
+
+
+    // const button = document.querySelectorAll(".delete")
+    // for(let btn of button){
+    //   btn.addEventListener("click",function(){
+    //     let row = this.closest("tr")
+    //     let name = row.children[0].innerText
+
+    //     alert(name + " Deleted")
+    //     row.remove()
+    //   })
+    // }  
+
+    // const card = document.querySelectorAll("card")
+    // const btn = document.querySelectorAll("show")
+    // for(let c of card){
+    //   btn.addEventListener("click",function(){
+    //     const title = c.children[0].innerText
+    //     const tech = c.chidlren[1].innerText
+
+    //     alert(
+    //       title + "\n" +
+    //       tech + "\n"
+    //     )
+    //   })
+    // }
+
+    // const button = document.querySelectorAll(".delete")
+    // for(let btn of button){
+    //   btn.addEventListener("click",function(){
+    //     this.closest("li").remove()
+    //   })
+    // }
+
+
+  </script>
+</body>
+</html>
