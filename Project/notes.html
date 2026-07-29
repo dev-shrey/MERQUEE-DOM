@@ -1,0 +1,282 @@
+<!-- DOM Traversal & Navigation  -->
+
+<!-- What is Parent Navigation  -->
+<!-- What is DOM TRaversal -->
+
+
+<!-- Document
+      html 
+        body 
+          div  
+            h1
+              span  -->
+
+
+<!-- JS can travel in 4 direction  -->
+
+<!-- 
+current -> next
+current -> previous 
+current -> children
+current -> parent
+-->
+
+
+<!-- Parent Element  -->
+
+
+<!-- <div id="1"> 
+  <div id="2">
+    <span></span>
+  </div>
+</div> -->
+
+
+<!-- <div id="1">
+  <div id="2">
+    <span></span>
+  </div>
+</div>
+
+parent of span -> 2 -->
+
+
+<!-- <section> 
+  <div>
+    <button>Click</button>
+  </div>
+</section> -->
+
+<!-- button -> div
+div -> section -->
+
+
+<!-- why do we need parent navigation ? -->
+
+
+<!-- <div class="card">
+  <h2>Hello</h2>
+
+  <button>Delete</button>
+</div> -->
+
+
+<!-- (parentElement) : return the immediate parent HTML Element
+
+element.parentElement
+
+HTMLelement -> if parent exist
+null -> if there no parent  -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<!-- <body>
+  <div id="box">
+  <h1 id="heading">
+      Welcome
+  </h1>
+  </div>
+
+  <button id="btn"> Find Parent</button>
+  <script>
+    const heading =  document.getElementById("heading")
+    const btn = document.getElementById("btn")
+
+    btn.addEventListener("click",()=>{
+      console.log(heading.parentElement)
+    })
+  </script> 
+</body> -->
+
+
+<body>
+  <!-- <div  class="card 1">
+    <div class="2">
+      <button id="btn">
+        Delete
+      </button>
+    </div>
+  </div> -->
+
+  <script>
+    btn.closest(".card").remove()
+  </script>
+</body>
+</html>
+
+
+
+<div class="card">
+  <div>
+    <p>
+      <span></span>
+    </p>
+  </div>
+</div>
+
+
+<!-- o/p ? -->
+<!-- <div id="box"></div> -->
+
+<!-- parentElement : Immediate Parent -->
+<!-- closest() : Searches upward until selector matches  -->
+
+
+  
+
+
+<!-- child navigation -->
+
+<!-- returns only html of children -->
+
+<div id="b1">
+  <h1>one</h1>   
+  <h2>two</h2>    
+  <button>kuch bhii</button> 
+  <p>ok</p> 
+</div>
+
+
+const box = document.getElementById("b1")
+conole.log(box.children[0])
+
+
+
+
+<ul class="parent">
+  <li></li>
+  <p></p>
+  <h1></h1>
+</ul>
+
+
+for(let tag of parent.children){
+  c.l(tag)
+}
+
+li
+p 
+h1
+
+
+children nd childnodes
+firstElementChild - Returns first child
+
+
+children - return only element node (div p)
+childnodes - node type html whitespacae comment
+
+box.firstElementChild
+box.lastElementChild
+
+
+box 
+  <h1></h1>
+  <h2></h2>
+
+
+<!-- specific children -->
+parent.children[2]
+
+
+firstElementChild   nd firstChild 
+
+
+<!--  -->
+<h1></h1>
+<h2></h2>
+<h3></h3>
+<!--  -->
+
+
+
+<!-- sibling navigation : curr ele k left ya right  -->
+
+<div>
+  <h2></h2>
+  <h1></h1>
+  <p id="para"></p>
+  <button></button>
+</div>
+
+
+current : p 
+
+1. nextElementSibling : returns next sibling 
+
+
+para.nextElementSibling
+o/p - button 
+
+
+2. previousElementSibling : returns previous sibling
+
+para.previousElementSibling
+o/p - h1
+
+
+
+<div>
+  <h2>Rahul</h2>
+  <p>MERN</p>
+</div>
+
+<div>
+  <h2>Ritik</h2>
+  <p>Python</p>
+</div>
+
+
+currCard = Rahul's Card
+
+
+let nextCard = currCard.nextEleSib
+
+nextCard = <div>
+  <h2>Ritik</h2>
+  <p>Python</p>
+</div>
+
+
+<nextCard class="children"></nextCard>
+
+
+
+why [0] ?
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="parent">
+    <h1 id="title">Hello </h1>
+  </div>
+
+  <button id="btn">Check Parent</button>
+
+
+  <script>
+    const title = document.getElementById("title")
+    const btn = document.getElementById("btn")
+
+    btn.addEventListener("click",function(){
+      console.log(title.parentElement)
+    })
+  </script>
+</body>
+</html>
