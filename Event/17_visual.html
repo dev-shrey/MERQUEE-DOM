@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visual Feedback Pattern </title>
+</head>
+<body>
+  <div class="container">
+    <h2>Student Registration Fomr</h2>
+    <input type="text"
+    id="name"
+    placeholder="Enter Name">
+
+    <input type="email"
+    id="email"
+    placeholder="Enter Email">
+
+    <button id="submit" disabled>Register</button>
+
+    <p id="msg"></p>
+  </div>
+
+
+  <script>
+    const inputName = document.getElementById('name')
+    const inputEmail = document.getElementById('email')
+    const submitBtn = document.getElementById('submit')
+
+    const msg = document.getElementById('msg')
+
+    function inputCheck (){
+      const name = inputName.value.trim()
+      const email = inputEmail.value.trim()
+
+      if(name!== ""  && email !== ""){
+        submitBtn.disabled = false
+      }
+
+      else{
+        submitBtn.disabled = true
+      }
+    }
+
+    inputName.addEventListener("input",()=>{
+      if(inputName.value.trim()==""){
+        inputName.style.border = "1px solid red"
+      }
+
+      else{
+        inputName.style.border = "1px solid green"
+      }
+
+      inputCheck()
+    })
+
+      inputEmail.addEventListener("input",()=>{
+      if(inpuEmail.value.trim()==""){
+        inputemail.style.border = "1px solid red"
+      }
+
+      else{
+        inputEmail.style.border = "1px solid green"
+      }
+
+      inputCheck()
+    })
+
+    submitBtn.addEventListener("click",()=>{
+      msg.innerText = "User Registering..."
+    })
+
+  </script>
+</body>
+</html>
