@@ -1,0 +1,69 @@
+/*
+removeAttribute()
+
+Removes an attribute from an element.
+*/
+
+const input = document.getElementById("username");
+
+// Remove placeholder
+input.removeAttribute("placeholder");
+
+// Remove disabled attribute
+input.removeAttribute("disabled");
+
+console.log(input);
+
+/*
+hasAttribute()
+
+Checks whether an attribute exists.
+
+Returns true or false.
+*/
+
+console.log(input.hasAttribute("type"));
+console.log(input.hasAttribute("placeholder"));
+console.log(input.hasAttribute("disabled"));
+
+/*
+Add attribute again
+*/
+
+input.setAttribute("placeholder", "Enter Username");
+
+console.log(input.hasAttribute("placeholder"));
+
+/*
+Working with an image
+*/
+
+const image = document.getElementById("image");
+
+console.log(image.hasAttribute("src"));
+console.log(image.hasAttribute("alt"));
+
+// Remove alt attribute
+image.removeAttribute("alt");
+
+console.log(image.hasAttribute("alt"));
+
+/*
+Working with a link
+*/
+
+const link = document.getElementById("link");
+
+// Remove target attribute
+link.removeAttribute("target");
+
+console.log(link.hasAttribute("target"));
+
+/*
+If an attribute doesn't exist,
+removeAttribute() does nothing.
+*/
+
+link.removeAttribute("title");
+
+console.log(link);
